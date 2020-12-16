@@ -1,9 +1,13 @@
 import Foundation
 
-struct RegexHelper {
+public struct RegexHelper {
     let pattern: String
     
-    func parse(_ inputString: String) -> [String] {
+    public init(pattern: String) {
+        self.pattern = pattern
+    }
+    
+    public func parse(_ inputString: String) -> [String] {
         var result = [String]()
         let regex = try! NSRegularExpression(pattern: pattern, options: [])
         let nsrange = NSRange(inputString.startIndex..<inputString.endIndex, in: inputString)
