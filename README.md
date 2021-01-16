@@ -14,29 +14,5 @@ RegexHelper is a simple wrapper for using regular expressions to extract data fr
 
 ## Adding `RegexHelper` as a Dependency
 
-To use the `RegexHelper` library in a SwiftPM project, 
-add the following line to the dependencies in your `Package.swift` file:
-
-```swift
-.package(url: "https://github.com/swiftyaf/RegexHelper", .upToNextMinor(from: "0.1.0")),
-```
-
-Finally, include `"RegexHelper"` as a dependency for your executable target:
-
-```swift
-let package = Package(
-    // name, platforms, products, etc.
-    dependencies: [
-        .package(url: "https://github.com/swiftyaf/RegexHelper", from: "0.1.0"),
-        // other dependencies
-    ],
-    targets: [
-        .target(name: "<target-name>", dependencies: [
-            .product(name: "RegexHelper", package: "RegexHelper"),
-        ]),
-        // other targets
-    ]
-)
-```
-Alternatively, you can add it from Xcode. Select `File > Swift Packages > Add Package Dependency...`, and paste `https://github.com/swiftyaf/RegexHelper`.
+You can add `RegexHelper` to your project from Xcode. Select `File > Swift Packages > Add Package Dependency...`, and paste `https://github.com/swiftyaf/RegexHelper`.
 
